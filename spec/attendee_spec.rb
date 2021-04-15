@@ -13,8 +13,14 @@ RSpec.describe do
   describe '#methods' do
     it '#name' do
       attendee = Attendee.new('Bob', 20)
-require "pry"; binding.pry
+
       expect(attendee.name).to eq('Bob')
+    end
+
+    it '#spending_money' do
+      attendee = Attendee.new('Bob', 20)
+
+      expect(attendee.spending_money).to eq 20
     end
   end
 end
