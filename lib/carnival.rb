@@ -13,10 +13,14 @@ class Carnival
     @rides.push(new_ride)
   end
 
-  # def recommend_rides(attendee)
-  #   rides_for_attendees = []
-  #   rides_for_attendees << @interests.attendee
-  #   @interests.attendee
+  def recommend_rides(attendee)
+    recommended_rides = []
+    @rides.find_all do |interest|
+      if jeffco_fair.ride.name == @interests
+        recommended_rides.push(@interests)
+      end
+    end
+  end
 
   def admit(attendee)
     @attendees.push(attendee)

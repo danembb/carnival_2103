@@ -10,6 +10,6 @@ class Attendee
   end
 
   def add_interest(ride)
-    @interests << ride
+    @interests.push(ride)
   end
 end
