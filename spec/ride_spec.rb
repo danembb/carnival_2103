@@ -11,10 +11,16 @@ RSpec.describe Ride do
   end
 
   describe '#methods' do
-    it '#has a name' do
+    it '#name' do
       ride = Ride.new({name: 'Ferris Wheel', cost: 0})
 
       expect(ride.name).to eq("Ferris Wheel")
+    end
+
+    it '#cost' do
+      ride = Ride.new({name: 'Ferris Wheel', cost: 0})
+require "pry"; binding.pry
+      expect(ride.cost).to eq 0
     end
   end
 end
